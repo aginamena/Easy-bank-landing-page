@@ -1,0 +1,281 @@
+*{
+  /* removing default browser styling */
+  border:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Public Sans', sans-serif;
+}
+
+/* navigation bar styling */
+.request_button{
+  background: linear-gradient(to right, hsl(136, 65%, 51%) ,  hsl(192, 70%, 51%));
+  color:white;
+  border-radius: 50px;
+  padding:10px 25px 10px 25px;
+  font-weight: 700;
+}
+.request_button:hover{
+  opacity:0.4;
+}
+.nav-text:hover{
+  border-bottom: 2px solid blue;
+}
+
+/* heading stying */
+#heading{
+  position: relative;
+  height: 500px;
+  /* we want the phones and background to overflow this div */
+  overflow: hidden;
+  background: linear-gradient(hsl(0, 0%, 98%) ,  hsl(0, 0%, 100%));
+}
+#background-heading{
+  max-width: 800px;
+  position: absolute;
+  bottom: 40px;
+  right: -100px;
+}
+#heading-pag{
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#background-mockups{
+  /* this element is positioned relative to the body element by default
+  so no need to do position:relative on body element
+   */
+  position: absolute;
+  right: 0;
+  top: 60px;
+  max-width: 500px;
+
+}
+#heading-pag-title{
+  font-size: 40px;
+  line-height: 45px;
+}
+#heading-pag-text{
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+/* section one styling */
+#section-one{
+  padding-top:40px;
+  background: hsl(220, 16%, 96%);
+  padding-bottom: 40px;
+}
+.section-heading{
+  font-size:30px;
+  margin-bottom:10px;
+}
+#section-one-text{
+  max-width: 600px;
+}
+#features{
+  display: flex;
+  margin-top:40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features-heading{
+  margin-top:20px;
+  margin-bottom: 20px;
+  font-size:20px;
+}
+.features-text{
+  max-width:260px;
+}
+.opacity{
+  opacity:0.8;
+}
+
+/* section-two of sytling */
+#section-two{
+  background: hsl(0, 0%, 98%);
+  padding-top:40px;
+  padding-bottom: 40px;
+}
+#article-features{
+  display: flex;
+  margin-top:40px;
+  justify-content: space-between;
+  /* reponsive flexbox. will wrap when screen is smaller */
+  flex-wrap: wrap;
+}
+.article-image{
+  max-width: 250px;
+  height: 187px;
+}
+.article-types{
+  background: white;
+  width:250px;
+}
+.author-of-article{
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left:20px;
+}
+.article-text-heading{
+  font-size: 18px;
+  max-width: 240px;
+  padding-left:20px;
+  cursor: pointer;
+}
+.article-text-heading:hover{
+  color:hsl(136, 65%, 51%);
+}
+.article-text-description{
+  padding: 20px 30px 20px 20px;
+  font-size: 15px;
+}
+
+/* section three styling */
+#section-three{
+  background: hsl(233, 26%, 24%);
+  padding-top:40px;
+  padding-bottom: 40px;
+}
+#footer-div{
+  position: relative;
+  height: 100px;
+}
+.social-media-sites{
+  margin-left:5px;
+  margin-right:5px;
+}
+#footer-button{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#social-media{
+  position: absolute;
+  bottom:0;
+}
+#right-reserved{
+  position: absolute;
+  bottom:0;
+  right:0;
+  color:gray;
+  cursor: pointer;
+}
+#footer-menu1{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color:white;
+  cursor: pointer;
+}
+
+#footer-menu2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color:white;
+}
+.hover-footer:hover{
+  color:hsl(136, 65%, 51%);
+}
+.social-media-hover{
+  cursor: pointer;
+}
+.social-media-hover:hover{
+  border: 2px solid hsl(136, 65%, 51%);
+}
+
+/* media querries */
+@media(max-width:1028px){
+  #background-heading{
+    /* reduce by 10% */
+    width:720px;
+  }
+  #background-mockups{
+    width:450px;
+  }
+  #heading-div{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media(max-width:996px){
+  #heading{
+    height:900px;
+  }
+  #background-heading{
+    top:0;
+    left:0;
+    width:100%;
+    max-width: none;
+    height:500px;
+  }
+  #background-mockups{
+    transform: translate(-50%);
+    left: 50%;
+    right:0;
+    }
+
+}
+@media(max-width: 768px){
+  .features-text{
+    max-width: none;
+  }
+}
+@media(max-width: 997px){
+  #heading-pag{
+    top:70%;
+    left:50%;
+    transform:translate(-50%, -50%);
+  }
+}
+@media(max-width: 548px){
+  #background-mockups{
+    width: 100%;
+  }
+}
+@media(max-width: 547px){
+  .article-text-heading{
+    max-width:none;
+  }
+  .article-types{
+    width:100%;
+  }
+}
+@media only screen and (max-width:798px){
+  body{
+    text-align: center;
+  }
+  #footer-menu1, #footer-menu2, #footer-button, #right-reserved, #social-media{
+    position: static;
+    transform:none;
+    text-align: center;
+  }
+  #footer-div{
+    height:400px;
+  }
+  #social-media{
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  #blog-styling{
+    margin-bottom: 10px;
+  }
+  #support-styling, #contact-styling{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  #footer-button{
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
+  /* #logo-div{
+    margin-bottom: 20px;
+  } */
+}
